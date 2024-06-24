@@ -1,0 +1,50 @@
+<div class="book-id">
+    <span (click)="tohome()">Home/</span> My orders
+    </div>
+    
+<div class="main-div">    
+        <div *ngFor="let orderdata of orders">
+        <div class="container">
+    <div class="inner-div1">
+        <img src="{{orderdata.image}}">
+    </div>
+    <div class="inner-div2">
+        <div class="title">
+            <span>{{orderdata.title}}</span>
+        </div>
+        <div class="author">
+            <span>{{orderdata.author}}</span>
+        </div>
+      
+        <div class="pri">
+            <div class="price">
+                <b> <span >Rs.  {{orderdata.totalPrice}}</span></b>
+            </div>
+    
+            <div class="amount">
+                <span>Rs.{{orderdata.totalOriginalPrice}}</span>
+              </div>
+              <span class="cancel"  (click)="CancelOrder(orderdata.orderId)">CancelOrder</span>
+
+        </div>
+
+        
+       
+        </div>
+        
+<div class="date">
+    <span class="icon" style="font-size:30px ; color:green" >&bull;</span> 
+    <b> <span>    Order Placed on    {{orderdata.orderDate}}</span></b>
+</div>
+       
+<!-- <div class="order">
+    <img class="delteOrder" (click)="CancelOrder(orderdata.orderId)" src="/assets/delete.png">
+    
+</div> -->
+
+
+            </div>
+        </div>
+
+
+</div>

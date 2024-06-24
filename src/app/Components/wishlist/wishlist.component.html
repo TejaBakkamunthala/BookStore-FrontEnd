@@ -1,0 +1,40 @@
+<p>wishlist works!</p>
+
+<div class="book-id">
+    <span (click)="tohome()">Home/</span> My whishlist
+    </div>
+<div class="main-div">
+    <span class="data"><span style="width:300px">MY WHISHLIST</span>({{carts.length}})</span>
+    
+        <div *ngFor="let cartdata of carts">
+        <div class="container">
+    <div class="inner-div1">
+        <img src="{{cartdata.image}}">
+    </div>
+    <div class="inner-div2">
+        <div class="title">
+            <span>{{cartdata.title}}</span>
+        </div>
+        <div class="author">
+            <span>{{cartdata.author}}</span>
+        </div>
+      
+        <div class="price">
+            <span >Rs.  {{cartdata.price}}</span>
+        </div>
+
+        <div class="amount">
+            <span>Rs.{{cartdata.originalPrice}}</span>
+          </div>
+       
+        </div>
+        <div class="inner-div3">
+            <img class="deltewish" (click)="deleteWishlist(cartdata.wishlistId)" src="/assets/delete.png">
+            
+    </div>
+            </div>
+        </div>
+
+
+
+</div>

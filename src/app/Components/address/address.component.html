@@ -1,0 +1,93 @@
+<div class="main-div" *ngFor="let data of addressdata">
+    <div class="info">
+        <div class="text">
+            <!-- <p>Customer details</p> -->
+            <b> <p>Customer details</p></b>
+            <!-- <b><span  class="text" style="font-size:small">Customer Details</span></b> -->
+
+        </div>
+
+        <div class="addaddress" (click)="handleaddress()">
+            <button>Add New Address</button>
+        </div>
+        </div>
+        <div *ngIf="!address">
+        <div class="details" >
+       <div class="name">
+        <label>First Name</label>
+        <input type="text" id="Name" />
+    </div>
+    <div class="number">
+        <label>Mobile Number</label>
+        <input type="text" id="mobile" />
+    </div>
+</div>
+<div class="address">
+    <label>Address</label>
+    <textarea id="address" name="address" rows="3" ></textarea>
+</div>
+<div class="citydetails">
+    <div class="city">
+        <label>City/Town</label>
+        <input type="text" id="Name" />
+    </div>
+    <div class="state">
+        <label>State</label>
+        <input type="text" id="mobile" />
+    </div>
+</div>
+
+<div class="type">
+    <div>
+        <span>Type</span>
+    </div>
+    <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Home</mat-radio-button>
+        <mat-radio-button value="2">Office</mat-radio-button>
+        <mat-radio-button value="3">Others</mat-radio-button>
+      </mat-radio-group>
+      
+
+</div>
+        </div>
+<div class="address-data" *ngIf="address">
+    <div class="details" style="margin-left: -20px; margin-bottom:10px;">
+        <div class="name">
+            <label>Full Name</label>
+            <input type="text" id="Name" value="{{name}}"/></div>
+        <div class="number">
+            <label>Mobile Number</label>
+            <input type="text" id="mobile" value="{{mobile}}"/></div>
+    </div>
+    <div class="home-data">
+        <mat-radio-button value="1">{{data.type}}</mat-radio-button>
+        <span class="edit" (click)="edit()" *ngIf="editaddress">EDIT</span>
+        <span class="edit" (click)="cancel()" *ngIf="!editaddress">cancel</span>
+        <span class="edit" *ngIf="!editaddress">save</span>
+        <div class="editaddress" *ngIf="!editaddress">
+        <div class="address">
+            <label>Address</label>
+            <textarea id="address" name="address" rows="3" >{{data.fullAddress}}</textarea>
+
+        </div>
+        <div class="citydetails">
+            <div class="city"><label>City/Town</label><input type="text" id="Name" value="{{data.city}}"/></div>
+            <div class="state"><label>State</label><input type="text" id="mobile" value="{{data.state}}"/></div>
+        </div>
+        </div>
+    </div>
+    <div class="ad-div" *ngIf="editaddress">
+        <span>Address</span>
+    </div>
+    <div class="address-div" *ngIf="editaddress">
+        <div *ngFor="let data of addressdata">
+            <span>{{data.address}},{{data.city}},{{data.state}},{{data.type}}</span>
+        </div>
+    </div>
+    
+</div>
+<div class="button" >
+    <button (click)="gotoorders()" *ngIf="removebutton">Continue</button>
+</div>
+
+</div>

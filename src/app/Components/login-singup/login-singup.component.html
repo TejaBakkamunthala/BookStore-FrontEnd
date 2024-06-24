@@ -1,0 +1,118 @@
+
+<div class="container">
+
+  <div class="left-section">
+    <div class="logo">
+      <img src="assets\2766594.png" alt="Online Book Shopping Logo">
+      <h2>ONLINE BOOK SHOPPING</h2>
+    </div>
+  </div>
+
+<div *ngIf="displayLogin; then loginpage else singuppage"></div>
+<ng-template #loginpage>
+
+<div class="login" >
+<form [formGroup]="loginDataForm" (ngSubmit)="OnLogin()">
+       <div class="right-section">
+      <div class="form-container">
+        <div class="tabs">
+          <button  style="margin-bottom: 10px;"type="button" class="tab active" (click)="displayLogin=true">LOGIN</button>
+          <button style="margin-bottom: 10px;" type="button" class="tab" (click)="displayLogin=false">SIGNUP</button>
+        </div>
+          <div class="form-group">
+            <label for="EmailId">Email Id</label>
+            <input type="email"  placeholder="EmailId" formControlName="emailId" >
+            <mat-error *ngIf="loginDataForm.get('emailId')?.hasError('email')&& loginDataForm.get('emailId')?.touched" style="margin-left:18px;color:red"> EmailId is not valid.
+                </mat-error>
+                  <mat-error *ngIf="loginDataForm.get('emailId')?.hasError('required') && loginDataForm.get('emailId')?.touched" style="margin-left: 18px;color:red;"> EmailId is required.
+                </mat-error>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input  id="password" placeholder="Password"  formControlName="password">
+            <mat-error *ngIf="loginDataForm.get('password')?.hasError('required') && loginDataForm.get('password')?.touched" style="margin-left: 18px;color: red;"> Password is required.
+            </mat-error>
+          </div>
+
+          <div class="forgot" style="margin-left:145px; width:100px; margin-top:-22px; margin-bottom: 10px;">
+          <div class="forgot"> <button mat-flat-button style="width:165px ; border: none;background: none;">Forgot password?</button></div>
+          </div>
+
+          <button type="submit" class="btn-login">Login</button>
+          <br>
+
+          <div class="or">OR</div>
+
+          <div class="btn-icons" >
+            <button type="button" class="btn-fb" >Facebook</button>
+            <button type="button" class="btn-google">Google</button>
+          </div>
+     
+      </div>
+    </div> 
+    </form>
+    </div>
+    </ng-template>
+
+
+    <ng-template #singuppage>
+      <form [formGroup]="SignUpDataForm" (ngSubmit)="OnSignUp()">
+
+     <div class="right-section">
+      <div class="form-container">
+        <div class="tabs">
+          <button  style="margin-top: 35px; "type="button" class="tab" (click)="displayLogin=true">LOGIN</button>
+          <button style="margin-top: 35px;" type="button" class="tab active" (click)="displayLogin=false">SIGNUP</button>
+        </div>
+
+        <div class="form-group" >
+          <label for="FullName">Full Name</label>
+          <input   placeholder="Full Name" formControlName="fullName" >
+          <mat-error *ngIf="SignUpDataForm.get('fullName')?.hasError('required') && SignUpDataForm.get('fullName')?.touched" style="margin-left: 18px;color:red;"> Full Name is required.
+          </mat-error>
+        </div>
+        
+          <div class="form-group">
+            <label for="EmailId">Email Id</label>
+            <input type="email"  placeholder="EmailId" formControlName="emailId" >
+            <mat-error *ngIf="SignUpDataForm.get('emailId')?.hasError('email') && SignUpDataForm.get('emailId')?.touched" style="margin-left:18px;color:red"> EmailId is not valid.
+                </mat-error>
+                  <mat-error *ngIf="SignUpDataForm.get('emailId')?.hasError('required') && SignUpDataForm.get('emailId')?.touched"style="margin-left: 18px;color:red;"> EmailId is required.
+                </mat-error>
+          </div>
+          
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input  id="password" placeholder="Password"  formControlName="password">
+            <mat-error *ngIf="SignUpDataForm.get('password')?.hasError('required') && SignUpDataForm.get('password')?.touched" style="margin-left: 18px;color: red;"> Password is required.
+            </mat-error>
+          </div>
+
+          <div class="form-group">
+            <label for="  Mobile Number">Mobile Number</label>
+            <input  id="mobileNumber" placeholder="Mobile Number"  formControlName="mobileNumber">
+            <mat-error *ngIf="SignUpDataForm.get('mobileNumber')?.hasError('required')&& SignUpDataForm.get('fullName')?.touched" style="margin-left: 18px;color: red;"> Mobile Number is required.
+            </mat-error>
+          </div>
+
+          <button type="submit" class="btn-login">Signup</button>
+          <br>
+
+        
+     
+      </div>
+    </div>  
+    </form>
+    </ng-template>
+
+  </div>
+
+
+
+
+
+    
+    
+
+ 

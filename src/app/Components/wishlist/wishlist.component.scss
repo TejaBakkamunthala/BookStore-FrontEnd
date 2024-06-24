@@ -1,0 +1,186 @@
+.book-id{
+    padding-left: 200px;
+    padding-top: 30px;
+    padding-bottom: px;
+}
+.book-id span{
+    color:#6e6c6c;
+}
+
+.book-id span{
+    cursor:pointer;
+}
+
+.main-div{
+    width:70%;
+    margin:0px auto;
+    // border:1px solid;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+
+.container{
+    display:flex;
+}
+
+.location{
+    float:right;
+    border:1px solid;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.location .material-symbols-outlined{
+    font-size: 16px;
+    padding-right: 3px;
+    color:#A03037;
+    
+}
+
+.inner-div1{
+
+    padding-left: 25px;
+    padding-top:40px;
+    padding-bottom: 30px;
+    // border: 1px solid;
+
+}
+
+.inner-div1 img{
+    width:75px;
+    height:95px;
+}
+
+.inner-div2{
+    padding-top:40px;
+    width:620px;
+    // border: 1px solid;
+    padding-left: 25px;
+}
+
+.add-to-bag{
+    margin-top:10px;
+    width:127px;
+    height:35px;
+    background-color: #A03037;
+    border:none;
+    color:white;
+
+}
+
+
+.add-quantity{
+    margin-top:10px;
+    width:127px;
+    height:35px;
+    background-color: white;
+    border:none;
+    color:black;
+    align-items: center;
+}
+
+.add-quantity span{
+    padding: 0px 7px;
+    border:1px solid;
+    margin-right:10px;
+}
+
+// .quantity .material-symbols-outlined{
+//     background-color: white;
+//     border:none;
+//     color:#aeaeae;
+//     border-color: #aeaeae;
+//     border:1px solid;
+//     border-radius: 50%;
+//     margin-right:10px;
+//     margin-top: 15px;
+//     font-size: 14px;
+
+// }
+
+.title{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.author{
+    font-size: 11px;
+    color:#aeaeae
+}
+
+.amount{
+    padding-top: 3px;
+    font-weight: 500;
+}
+
+.amount span{
+    padding-left:8px;
+    // width: 36px;
+    // height: 13px;
+/* UI Properties */
+    text-align: left;
+    text-decoration: line-through;
+    font: normal normal normal 10px/13px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+    opacity: 1;
+}
+
+.quantity{
+    padding-top: 5px;
+}
+
+.quantity .remove{
+    font-size: 12px;
+    padding-left: 10px;
+}
+
+.quantity .remove:hover{
+    cursor:pointer;
+}
+
+.place-order{
+    float:right;
+    font-size: 12px;
+    border:1px solid;
+    color: white;
+    background-color: #3371B5;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+
+.data{
+    border:1px solid #E4E4E4;
+    width:100%;
+    padding-right: 930px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #F5F5F5;
+}
+
+.container{
+    border:1px solid #E4E4E4;
+}
+
+.inner-div3 {
+    padding-top: 65px;
+    // padding-left: 530px;
+}
+
+.inner-div3 span{
+cursor: pointer;
+}
+
+
+.deltewish:hover{
+    cursor: pointer;
+}
+
+.deltewish{
+    width:20px;
+    height:20px;
+    margin-right:-150px;
+    margin-left: 280px;
+}

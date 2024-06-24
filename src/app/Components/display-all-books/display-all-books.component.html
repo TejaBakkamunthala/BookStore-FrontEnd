@@ -1,0 +1,26 @@
+
+<div class="book-count-row">
+    <div class="book-count">
+        <h1>Books</h1><mat-hint>({{bookcount}}) items</mat-hint>
+    </div>
+
+
+    <div class="book-countt">
+        <button mat-button [matMenuTriggerFor]="menu">Sort by relevance <mat-icon>expand_more</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>Price : Low to High</button>
+            <button mat-menu-item>Price : High to Low</button>
+            <button mat-menu-item>Newest Arraivals</button>
+        </mat-menu>
+
+    </div>
+</div>
+
+<br>
+
+<div class="card-container" >
+    <ng-container *ngFor="let book of BooksList  | filter : bookNote"> 
+        <app-display-one-book [Book]="book"></app-display-one-book>
+    </ng-container>
+</div>
+

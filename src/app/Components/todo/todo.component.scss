@@ -1,0 +1,53 @@
+.container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .input-group input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  
+  
+  li input[type="text"] {
+    flex-grow: 1;
+    padding: 5px;
+  }
+
+  .del{
+    background-color: red;
+  }
+
+  
+.del:hover{
+    cursor: pointer;
+}
+  
+.upd{
+    background-color: orange;
+}
+
+.upd:hover{
+    cursor:pointer
+    
+}

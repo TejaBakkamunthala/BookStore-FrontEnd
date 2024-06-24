@@ -1,0 +1,36 @@
+
+<div class="main-div">
+    <b><span  class="order-text" style="font-size:medium">Order Summary</span></b>
+    <!-- <span class="order-text">Order Summary</span> -->
+    <div *ngFor="let cartdata of carts">
+        <div class="container">
+    <div class="inner-div1">
+        <img src="{{cartdata.image}}">
+    </div>
+    <div class="inner-div2">
+        <div class="title">
+            <span>{{cartdata.title}}</span>
+        </div>
+        <div class="author">
+            <span>{{cartdata.author}}</span>
+        </div>
+
+          <div class="prices">
+            <span class="price">Rs. {{cartdata.totalPrice}}</span>
+            <span class="original-price">Rs. {{cartdata.totalOriginalPrice}}</span>
+          </div>
+    </div>
+
+    
+        </div>
+        <div class="checkout" *ngIf="carts.length>0">
+            <button (click)="placeOrder(cartdata.cartId)">CHECKOUT</button>
+            <div>
+                <!-- <button (click)="cancelOrder(cartdata.orderId)">CANCELORDER</button> -->
+
+            </div>
+
+          </div>
+    </div>
+    
+</div>

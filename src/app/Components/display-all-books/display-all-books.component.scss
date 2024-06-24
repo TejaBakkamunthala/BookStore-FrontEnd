@@ -1,0 +1,58 @@
+.book-count-row{
+    width: 66%;
+    margin: 0px auto;
+    margin-top: 70px;
+    height: 40px;
+    //border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-count{
+    display: flex;
+    align-items: center;
+}
+
+.book-count-row .book-count h1{
+    //border: 2px solid;
+    margin-top: 15px;
+    font: normal normal normal 25px/33px Roboto;
+    letter-spacing: 0px;
+    color: #0A0102;
+    margin-right: 5px;
+}
+
+.book-count-row .book-count mat-hint{
+    font: normal normal normal 12px/16px Roboto;
+    letter-spacing: 0px;
+    color: #9D9D9D;
+}
+
+.book-count-row .book-countt select{
+    position: relative;
+    right: 0px;
+    border-radius: 0px;
+    height: 30px;
+}
+
+.book-countt select option{
+    height: 25px !important;
+}
+
+
+.card-container{
+    width: 66%;
+    margin: 0px auto;
+    margin-top: 5px;
+    height: fit-content;
+    //border: 2px solid;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    //gap: 20px;
+    
+}
+
+
+

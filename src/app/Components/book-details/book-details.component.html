@@ -1,0 +1,126 @@
+
+<div class="book-id">
+    <span routerLink="/dashboard/getall">Home/</span> Book({{data.bookId}})
+    </div>
+    
+
+    <div class="main-div">
+        <div class="inner-div1">
+            <img  class="book" src="{{data.image}}">
+            <div class="buttons">
+                <!-- <button class="add-to-bag"class="add-to-bag" (click)="Quantity(data.bookId)" *ngIf="button">ADD TO BAG</button> -->
+                <!-- <button class="add-to-bag" (click)="addToCart(bookId, quantity)">Add to Cart</button> -->
+                <button class="addcart" (click)="Quantity()" *ngIf="button">ADD TO BAG</button>
+
+           
+                 <span class="add-quantity"  *ngIf="!button">
+                                             
+                  <!-- <button  class="material-symbols-outlined"  ><img  src="assets/remove.png"></button>
+                  <span>{{count}}</span>
+                  <button  class="material-symbols-outlined" > <img  src="assets/add.png"></button>  -->
+
+                  <button  class="material-symbols-outlined"  (click)="decrement()"><img  src="assets/remove.png"></button>
+                  <span>{{count}}</span>
+                  <button  class="material-symbols-outlined"  (click)="increment()"> <img  src="assets/add.png"></button>
+
+
+                 </span>
+    
+                    
+                 <!-- <button class="whishlist">&#10084; WISHLIST</button> -->
+                 <button class="whishlist" (click)="add(data.id)"  (click)="onclick()">&#10084; WISHLIST</button>
+
+    
+        </div>
+        </div>
+
+
+
+        <div class="inner-div2">
+            <div class="title">
+                <span>{{data.title}}</span>
+            </div>
+            <div class="author">
+                <span>{{data.author}}</span>
+            </div>
+
+            <div class="rate" >
+                <mat-hint style="margin-left:10px" >{{data.rating}}</mat-hint>
+                <!-- <img class="star" src="assets/star.png"/> -->
+    
+                <span>  &#9734;</span>
+                <!-- <span>  &#9734;</span> -->
+    
+            </div>
+            
+            <div class="count">
+                <mat-hint>({{data.ratingCount}})</mat-hint>
+            </div>
+
+            
+            <!-- <div class="book-rating">
+                <mat-hint>{{data.rating}}</mat-hint>
+                <span>{{data.rating}}</span>
+                <span>  &#9734;</span>
+
+                <span>({{data.ratingCount}})</span>
+            </div> -->
+
+            <!-- <div class="book-price">
+                Rs. {{data.price}}<span>   Rs{{data.originalPrice}}</span>
+    
+            </div>
+     -->
+            
+        <mat-hint class="price">Rs:{{data.price}} </mat-hint>
+        <mat-hint class="originalPrice">Rs:{{data.originalPrice}}</mat-hint>
+        
+        
+            <div class="book-data">
+                <span class="icon" style="font-size: 20px;" >&bull;</span> 
+                <span>Book Detail</span>
+            </div>
+            <div class="book-description">
+                <span>{{data.description}}</span>
+            </div>
+    
+
+
+ <!-- src/app/feedback/feedback.component.html -->
+<div class="feedback-details">
+    <span>Customer Feedback</span>
+  </div>
+  <div class="feedback">
+    <div class="rating">
+      <span>Overall rating</span>
+    </div>
+    <div class="stars">
+      <span (click)="setRating(1)">&#9734;</span>
+      <span (click)="setRating(2)">&#9734;</span>
+      <span (click)="setRating(3)">&#9734;</span>
+      <span (click)="setRating(4)">&#9734;</span>
+      <span (click)="setRating(5)">&#9734;</span>
+    </div>
+    <div class="review-text">
+      <input [(ngModel)]="review" type="text" placeholder="Write your review">
+    </div>
+    <div class="submit">
+      <button>Submit</button>
+    </div>
+  </div>
+  <div class="feedback-list">
+    <!-- <h3>Reviews:</h3> -->
+    <div *ngFor="let feedback of data.feedbacks" class="feedback-item">
+        <span class="name">{{feedback.userName}}</span>
+      <div class="rating">
+        <span *ngFor="let star of [1, 2, 3, 4, 5]" [ngClass]="{'filled':star <= feedback.rating}">&#9733;</span>
+        
+      </div>
+      <div class="review-text">
+        <p>{{ feedback.review }}</p>
+      </div>
+    </div>
+  </div>
+  
+        </div>
+    </div>

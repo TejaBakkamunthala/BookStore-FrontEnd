@@ -1,0 +1,105 @@
+.card{
+    height: 310px;
+    width: 235px;
+    //border: 2px solid;
+    margin-bottom: 30px;
+    border: 2px solid #E2E2E2;
+    border-radius: 3px;
+    //margin-left: 50px;
+    //transition-duration: 600ms;
+}
+
+.card:hover{
+    box-shadow: rgba(146, 143, 143, 0.273) 2px 2px 6px 6px;
+}
+
+.card .book-img{
+    height: 175px;
+    width: 100%;
+    //border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+}
+
+.card .details{
+    width: 80%;
+   // border: 1px solid ;
+    margin: 0px auto;
+}
+
+.details .author{
+    // font: normal normal normal 11px/13px Roboto;
+    letter-spacing: 0px;
+    color: #878787;
+
+}
+
+// .rating{
+//     background-color: hsl(123, 43%, 39%);
+//     color: white;
+//     height: 120px;;
+//     padding: 1px 2px 1px 5px;
+//     margin-right: 3px;
+// }
+
+// .rating mat-icon{
+//     font-size: medium;
+//     position: relative;
+//     top: 10px;
+//     margin-left: 5px;
+// }
+
+
+.rate
+{
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    color: white;
+    background-color: green;
+}
+
+.star{
+    gap: 5px;
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    color: white;
+   // border-color: white;
+    //background-color:green;
+   filter:invert(100%) brightness(150%);
+
+}
+
+.count{
+   // gap: 5px;
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    margin-left:60px;
+    margin-top: -20px;
+   // color: white;
+   // border-color: white;
+   
+
+}
+// .actualPrice{
+//     text-decoration: line-through;
+//     margin-left: 3px;
+//     font-size: 13px;
+// }
+
+.originalPrice{
+    text-decoration: line-through;
+    font-size: 13px;
+
+}
+
+.price{
+   font-size: 15px; 
+   margin-right: 10px;
+   font-weight: bold;
+}

@@ -1,0 +1,93 @@
+<p>cart works!</p>
+
+<div class="book-id" style="margin: 20px;">
+    <span routerLink="/dashboard/getall">Home/</span> MyCart
+  </div>
+  
+  <div class="main-div">
+    <!-- <span style="padding-left: 25px;">My Cart ({{ carts.length }})</span> -->
+    <b><span  class="text" style="font-size:medium">My Cart ({{ carts.length }})</span></b>
+
+    <span class="location">
+      <span class="material-symbols-outlined"> location_on </span>BridgeLabz Solutions...▼
+    </span>
+          
+
+    <div *ngFor="let cartdata of carts">
+      <div class="container">
+        <div class="inner-div1">
+    
+          <img [src]="cartdata.image" alt="{{ cartdata.title }}">
+        </div>
+        <div class="inner-div2">
+          <div class="title">
+            <span>{{cartdata.title }}</span>
+          </div>
+          <div class="author">
+            <span>{{ cartdata.author }}</span>
+          </div>
+
+          <div>
+            <span>Rs.{{cartdata.totalPrice}}</span>
+          </div>
+          <div class="amount">
+            <span>Rs{{cartdata.totalOriginalPrice}}</span>
+          </div>
+
+          <div class="quantity">
+            <span class="add-quantity">
+              <button class="material-symbols-outlined" (click)="decrement(cartdata)">
+                <img class="opr" src="/assets/remove.png" alt="Remove">
+              </button>
+              <span class="oprr">{{ cartdata.quantity }}</span>
+              <button class="material-symbols-outlined" (click)="increment(cartdata)">
+                <img class="opr" src="/assets/add.png" alt="Add">
+              </button>
+            </span>
+            <span class="remove" (click)="deleteCart(cartdata.cartId)">Remove</span>
+
+            <!-- <div class="place-order" *ngIf="cart.length > 0">
+              <span (click)="opendialog()" *ngIf="toggleplaceorder">PLACE ORDER</span>
+
+            </div> -->
+
+             <div>
+              <span class="place-order" (click)="opendialog()" *ngIf="toggleplaceorder">PLACE ORDER</span>
+
+             </div>
+           
+          </div>
+
+          
+
+        </div>
+      </div>
+    </div>
+  
+    <!-- <div class="place-order" *ngIf="cart.length > 0">
+      <span (click)="opendialog()" *ngIf="toggleplaceorder">PLACE ORDER</span>
+    </div> -->
+
+
+  </div>
+  
+  <div class="address-text" *ngIf="!useraddress">
+    <span>Address Details</span>
+  </div>
+  
+  <div class="address" *ngIf="useraddress">
+    <app-address (order)="handleevent($event)"></app-address>
+  </div>
+  
+  <div class="order-text" *ngIf="!ordersummary">
+    <span>Order Summary</span>
+  </div>
+  
+
+  <div class="order-summary" *ngIf="ordersummary">
+    <app-order-summary></app-order-summary>
+    <div class="checkout" *ngIf="carts.length > 0">
+      <!-- <button (click)="orderSucess()">CHECK OUT</button> -->
+    </div>-
+  </div>
+  

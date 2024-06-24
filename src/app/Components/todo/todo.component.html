@@ -1,0 +1,20 @@
+<p>todo works!</p>
+
+   <div class="container">
+    <h1>To-Do List Application</h1>
+    <div class="input">
+      <input [(ngModel)]="newTodoTitle" placeholder="Enter new to-do" />
+      <button (click)="addTodo()">Create</button>
+    </div>
+    <ul>
+      <li *ngFor="let todo of todos">
+        <span>{{todo.id}}</span>
+        <span *ngIf="!todo.editing">{{ todo.title }}</span>
+        <input *ngIf="todo.editing" [(ngModel)]="todo.title" />
+        <button class="upd" *ngIf="!todo.editing" (click)="editTodo(todo)">Update</button>
+        <button class="upd" *ngIf="todo.editing" (click)="updateTodoTitle(todo)">Update</button>
+        <button class="del" (click)="deleteTodo(todo.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

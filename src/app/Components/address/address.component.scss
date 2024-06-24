@@ -1,0 +1,139 @@
+.main-div{
+    // display:flex;
+    width: 60%;
+    margin: 0px auto;
+    border:1px solid;
+}
+
+.details{
+    display:flex;
+    margin-left:5px;
+}
+
+ div{
+    width:150px
+    }
+     div label{
+    clear:left;
+    font-size:11px;
+    }
+     input{
+        width:250px;
+        height:40px;
+    }
+.name {
+    margin-right: 130px; 
+}
+
+.city{
+    margin-right: 130px;
+}
+
+.address{
+    margin-left:5px;
+
+}
+.address input{
+    width:527px;
+    height:80px
+}
+
+.citydetails{
+    display:flex;
+    margin-left:5px;
+
+}
+
+.type{
+    width:500px;
+    margin-left:25px;
+
+}
+
+.type mat-radio-button{
+    padding-top: 10px;
+    padding-right:75px;
+}
+
+.button{
+  margin-left: 85%;
+  padding-bottom: 15px;
+
+}
+.button button{
+    background-color: #3371B5;
+    color:white;
+    padding:5px 13px;
+    border: none;
+}
+.info{
+    padding-top: 15px;
+    display:flex;
+}
+
+.text{
+    margin-right: 390px;
+    width:200px;
+    // padding-right: 100px;
+}
+
+.text p{
+    width: 200px;
+    // border:1px solid;
+}
+.addaddress{
+    width:100px;
+
+     //border:1px solid;
+
+}
+
+.addaddress button{
+    color:#A03037;
+    border: none;
+    border:1px solid #A03037;
+    padding: 7px;
+    width: 150px;
+    margin-left: -200px;
+}
+
+.address-data{
+    padding-top: 20px;
+    width:auto;
+    margin-left: 25px;
+}
+
+.address-data mat-radio-button{
+    font-weight: 500;
+}
+.address-div{
+    width:535px;
+    margin-left: 10px;
+}
+.ad-div{
+    margin-left: 10px;
+    font-weight: 500;
+}
+.button button:hover{
+    cursor:pointer;
+}
+
+.edit{
+    margin-left:20px;
+    color:red;
+    font-size: 12px;
+}
+
+.edit:hover{
+    cursor:pointer;
+}
+.home-data{
+    width:200px;
+}
+#address{
+    resize: none;
+    overflow: hidden;
+    width:535px;
+    font: normal normal normal 14px/19px Roboto;
+    font-weight: normal;
+}

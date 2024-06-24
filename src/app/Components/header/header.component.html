@@ -1,0 +1,110 @@
+
+
+<mat-toolbar >
+
+    <mat-toolbar-row >
+
+      <img class="book" src="/assets/book.png" alt="">
+      
+         <span class=store>BookStore </span>
+
+       <div class="header-search-container">
+
+        <img class="search" src="/assets/search.png" alt="" (keyup)="search($event)">
+
+        
+        <input matInput placeholder="Search"  type="text"  class="search-bar" >
+
+    </div>
+
+    <div class="person">
+        <img  (click)="profiledata()" class="person-img pt-3"  src="assets/profile.png">
+        <p style="font-size: 10px;padding-bottom: 10px;margin-left:-4px;color: white;">{{loggedin ? name : "Profile"}}</p>
+        <!-- <p>{{ loggedin ? name : "Profile" }}</p> -->
+    </div>
+
+    <div class="signup" *ngIf="loginclick">
+        <dialog open id="dialog">
+            <span>Welcome</span>
+            <div class="text"><p style="font-size: 13px;">To acesess account and manage orders</p></div>
+            <!-- <div ><button class="button">LOGIN/SIGNUP</button></div> -->
+            <div class="button"><button (click)="login()">LOGIN/SIGNUP</button></div>
+
+
+            <div class="divider">
+            <mat-divider></mat-divider>
+            </div>
+
+            <div class="orders">
+                <img  class="bag" src="assets/shoping_bag.svg"/>
+                <p class="ord" >My Orders</p>
+              </div>
+
+              <div class="orders">
+                <img  class="favourite" src="/assets/favorite.svg"/>
+                <p class="wish">Wishlist</p>
+              </div>
+             
+            
+        </dialog>
+
+    </div>
+   
+
+    <div class="loggedin" *ngIf="loggedin">
+      <dialog open id="dialog">
+          <div style="margin-top:-20px;margin-bottom: -5px;"><p> Hello {{name}},</p></div>
+          <div class="person">
+              <img  (click)="profile()"  class="profile" src="/assets/profile.png" >
+              <p style=" padding-left: -10px;font-size: 13px;">Profile</p>
+              <p style="padding-top: 10px;padding-left: 8px;font-size: 13px;">My Orders</p>
+          </div>
+
+         
+            <p style=" padding-left: 30px;margin-top:-30px; font-size: 13px;">Profile</p>
+
+
+          
+
+          <div class="orders" style="margin-top:-20px;margin-bottom:-10px;">
+              <img (click)="gotoOrders()" class="shopping_bag" style="margin-top: -px;" src="/assets/shoping_bag.svg"/>
+               <p style="padding-top: 10px;padding-left: 8px;font-size: 13px;">My Orders</p>
+
+              
+            </div>
+
+            <div class="orders">
+              <img class="shopping_bag" (click)="gotoWish()" src="/assets/favorite.svg"/>
+               <p style="padding-top: 10px;padding-left: 8px;font-size: 13px;">Whishlist</p>
+            </div>
+            <div class="logout" style="margin-top: -5px;">
+              <button  style="width:120px;height:30px;background-color:white;border-color: brown;color: brown;" (click)="logout()" >Logout</button>
+            </div>
+      </dialog>
+  </div> 
+    <div class="wishlist-icon">
+        <img class="cart-icon" src="assets/cart.png" (click)="tocart()">
+        <p  class="Cart">Cart </p>
+      </div>
+
+      <!-- <div (click)="goToCart()">
+        <img class="cart" src="assets/cart.png">
+        <p>Cart ({{ cartItems.length }})</p>
+    </div> -->
+   
+
+      <!-- <div class="wishlist-icon">
+        <img class="cart-pic" src="../../../assets/supermarket.svg" (click)="tocart()">
+        <p style="color: white;font-size: 10px;padding-bottom: 10px;">Cart</p>
+      </div> -->
+
+    
+    
+    </mat-toolbar-row>
+    
+    </mat-toolbar>
+    
+   
+    
+    
+    

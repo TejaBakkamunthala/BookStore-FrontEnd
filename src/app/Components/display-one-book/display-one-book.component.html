@@ -1,0 +1,42 @@
+
+<div class="card" (click)="toopenbook()" >
+    <div class="book-img">
+        <img src="{{Book.image}}" alt="" width="105px" height="135px">
+    </div>
+
+    <div class="details">
+        <span>{{Book.title}}</span>
+        <!-- <p><b>{{Book.title}}</b></p>
+        <p><strong>{{Book.title}}</strong></p> -->
+        <br>
+
+         <mat-hint class="author">by {{Book.author}}</mat-hint>
+        <!-- <span class="author">by {{Book.author}}</span> 
+        <p class="author">by {{Book.author}}</p> -->
+
+
+        <br>
+
+        <!-- <span class="rating">4.5<mat-icon >star</mat-icon></span> -->
+
+        <div class="rate" >
+            <mat-hint style="margin-left:10px" >{{Book.rating}}</mat-hint>
+            <!-- <img class="star" src="assets/star.png"/> -->
+
+            <span>  &#9734;</span>
+            <!-- <span>  &#9734;</span> -->
+
+        </div>
+        <div class="count">
+            <mat-hint>({{Book.ratingCount}})</mat-hint>
+        </div>
+
+        
+        <br>
+
+        <mat-hint class="price">Rs:{{Book.price}} </mat-hint>
+        <mat-hint class="originalPrice">Rs:{{Book.originalPrice}}</mat-hint>
+        <!-- <b>Rs. {{Book. DiscountPrice}} </b> <mat-hint class="actualPrice"></mat-hint> -->
+
+    </div>
+</div>
